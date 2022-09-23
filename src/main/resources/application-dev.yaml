@@ -1,0 +1,13 @@
+server:
+  port: 8761
+
+serviceRegistry:
+  username: serviceregistry
+  password: '123sr'
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: 'http://${serviceRegistry.username}:${serviceRegistry.password}@localhost:8761/eureka'
